@@ -8,9 +8,22 @@ $fa-font-path: "../node_modules/font-awesome/fonts";
   font-family: 'Noto Sans TC';
   box-sizing: border-box;
 }
+body{
+  margin: 0;
+  padding: 0;
+}
 // color
 $white:#ffffff;
 $lightYellow:#ffe180;
 $deepGreen:#3f5f45;
 $lightGreen:#eaf0ed;
 $mediumGreen:#8da291;
+
+.suscribe-mail{
+  background-color: $deepGreen;
+  .text{
+    color: $white;
+    font-size: 24px;
+    color: $lightGreen;
+  }
+}
