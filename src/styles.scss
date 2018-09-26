@@ -21,9 +21,50 @@ $mediumGreen:#8da291;
 
 .suscribe-mail{
   background-color: $deepGreen;
+  padding-left: 120px;
+  padding-right: 120px;
   .text{
-    color: $white;
     font-size: 24px;
     color: $lightGreen;
+  }
+  .ui-inputgroup{
+    border-width: 0;
+    .ui-inputgroup-addon{
+      border-radius: 0;
+      &.left{
+        background-color: $lightGreen;
+        i{
+          color: $deepGreen;
+        }
+      }
+      &.right{
+        background-color: $lightYellow;
+      }
+    }
+  }
+}
+.footer-info{
+  background-color: $lightGreen;
+  color: $deepGreen;
+  padding-left: 120px;
+  padding-right: 120px;
+  div{
+    padding: 3px 0;
+  }
+  .footer-logo{
+    width: 171px;
+  }
+  .icon{
+    img{
+      height: 32px;
+      height: 32px;
+      margin-right: 6px;
+      cursor: pointer;
+    }
+  }
+  .good-to-eat{
+    img{
+      height: 218px;
+    }
   }
 }
