@@ -4,14 +4,17 @@ $fa-font-path: "../node_modules/font-awesome/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
 // font
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 * {
   font-family: 'Noto Sans TC';
   box-sizing: border-box;
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
 }
+
 // color
 $white:#ffffff;
 $lightYellow:#ffe180;
@@ -19,52 +22,115 @@ $deepGreen:#3f5f45;
 $lightGreen:#eaf0ed;
 $mediumGreen:#8da291;
 
-.suscribe-mail{
+
+header {
+  background-color: $white;
+  color: $deepGreen;
+
+  .logo-full {
+    img {
+      height: 40px;
+    }
+  }
+
+  i {
+    &.fa {
+      font-size: 24px;
+    }
+  }
+
+  .link {
+    span {
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+}
+
+.suscribe-mail {
   background-color: $deepGreen;
   padding-left: 120px;
   padding-right: 120px;
-  .text{
+
+  .text {
     font-size: 24px;
     color: $lightGreen;
   }
-  .ui-inputgroup{
+
+  .ui-inputgroup {
     border-width: 0;
-    .ui-inputgroup-addon{
+
+    .ui-inputgroup-addon {
       border-radius: 0;
-      &.left{
+
+      &.left {
         background-color: $lightGreen;
-        i{
+
+        i {
           color: $deepGreen;
         }
       }
-      &.right{
+
+      &.right {
         background-color: $lightYellow;
       }
     }
   }
 }
-.footer-info{
+
+.footer-info {
   background-color: $lightGreen;
   color: $deepGreen;
   padding-left: 120px;
   padding-right: 120px;
-  div{
+
+  div {
     padding: 3px 0;
   }
-  .footer-logo{
+
+  .footer-logo {
     width: 171px;
   }
-  .icon{
-    img{
+
+  .icon {
+    img {
       height: 32px;
       height: 32px;
       margin-right: 6px;
       cursor: pointer;
     }
   }
-  .good-to-eat{
-    img{
+
+  .good-to-eat {
+    img {
       height: 218px;
+    }
+  }
+}
+
+// login
+.login {
+  background-color: $deepGreen;
+  .title{
+    font-size: 36px;
+    font-weight: bold;
+    color: $lightGreen;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .ui-inputgroup {
+    .ui-inputgroup-addon {
+      background-color: $lightGreen;
+      border-radius: 0;
+      border-width: 0;
+      padding: 20px;
+    }
+    input {
+      background-color: $lightGreen;
+      border-radius: 0;
+      border-width: 0;
+      padding: 20px;
     }
   }
 }
