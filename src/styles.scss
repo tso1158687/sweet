@@ -1,27 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-//font-awsome
-$fa-font-path: "../node_modules/font-awesome/fonts";
-@import "../node_modules/font-awesome/scss/font-awesome.scss";
-// font
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-
 * {
   font-family: 'Noto Sans TC';
   box-sizing: border-box;
 }
-
+@import "./scss/index.scss";
 body {
   margin: 0;
   padding: 0;
 }
-
-// color
-$white:#ffffff;
-$lightYellow:#ffe180;
-$deepGreen:#3f5f45;
-$lightGreen:#eaf0ed;
-$mediumGreen:#8da291;
-
 
 header {
   background-color: $white;
@@ -111,7 +97,8 @@ header {
 // login
 .login {
   background-color: $deepGreen;
-  .title{
+
+  .title {
     font-size: 36px;
     font-weight: bold;
     color: $lightGreen;
@@ -131,6 +118,246 @@ header {
       border-radius: 0;
       border-width: 0;
       padding: 20px;
+    }
+  }
+}
+.connect{
+  .title{
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $deepGreen;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+// copy nav bar
+// Styling for the navbar
+#mainNav {
+  border-bottom: 1px solid fade-out($gray-900, .9);
+  background-color: $white;
+  .navbar-brand {
+    font-weight: bold;
+    color: $primary;
+    font-size: 36px;
+    font-style: italic;
+    font-family: 'GFS Didot';
+    &:focus,
+    &:hover {
+      color: darken($primary, .1);
+    }
+    @media (max-width: 768px){
+      font-size: 28px;
+      margin: 5px 0;
+    }
+    img{
+      position: relative;
+      bottom: 5px;
+      @media (max-width: 992px){
+        display: none;
+      }
+    }
+  }
+  .phone-cart{
+    display: none;
+    @media (max-width: 992px){
+      display: block;
+    }
+  }
+  .navbar-toggler{
+    border: 0;
+  }
+  .navbar-nav {
+    > li.nav-item {
+       > a.nav-link,
+      > a.nav-link:focus {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $gray-900;
+        &:hover {
+          color: $primary;
+        }
+        &.active {
+          color: $primary !important;
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+      a.nav-link {
+        &.cart{
+          @media (max-width: 992px){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    border-color: transparent;
+    background-color: transparent;
+    padding: 32px 8px;
+    .navbar-brand {
+      color: $light-primary;
+      display: flex;
+      align-items: center;
+      img{
+        margin-right: 10px;
+        bottom: 0;
+      }
+      &:focus,
+      &:hover {
+        color: $primary;
+      }
+    }
+    .navbar-nav > li.nav-item > a.nav-link {
+      padding: 0 30px;
+      &.cart{
+        padding-right: 0;
+      }
+    }
+    .navbar-nav > li.nav-item > a.nav-link,
+    .navbar-nav > li.nav-item > a.nav-link:focus {
+      color: $light-primary;
+      &:hover {
+        color: $primary;
+      }
+    }
+    &.navbar-shrink {
+      border-top: 5px solid $light-primary;
+      background-color: $white;
+      padding: 5px 8px;
+      box-shadow: 0px 1px 15px rgba(0,0,0,0.3);
+      .navbar-brand {
+        color: $primary;
+        &:focus,
+        &:hover {
+          color: darken($primary, .1);
+        }
+      }
+      .navbar-nav > li.nav-item > a.nav-link,
+      .navbar-nav > li.nav-item > a.nav-link:focus {
+        color: $primary;
+        &:hover {
+          color: $light-primary;
+        }
+      }
+    }
+
+  }
+  @media (max-width: 991px){
+    .nav-item:nth-child(2){
+      border-top: 1px #ddd solid;
+      border-bottom: 1px #ddd solid;
+    }
+    .nav-item .nav-link{
+      padding: 15px 0;
+      text-align: center;
+      font-size: 20px !important;
+      color: $dark-primary !important;
+    }
+  }
+}
+// footer
+#follow{
+  padding: 30px 0;
+  background-color: $dark-primary;
+  .con{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: $blue;
+    span{
+      margin-left: 15px;
+      @include sans-serif-font();
+    }
+    @media (max-width: 768px){
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+  .input-group-prepend{
+    background-color: $blue;
+    .input-group-text{
+      padding-left: 24px;
+      font-size: 20px;
+    }
+  }
+  input{
+    height: 56px;
+    background-color: $blue;
+    border: none;
+    font-size: 22px;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  .send-follow{
+    background-color: $yellow;
+    color: $dark-primary;
+    border: none;
+    padding: 0 24px;
+    font-size: 20px;
+    @include transition-all;
+    cursor: pointer;
+    &:hover{
+      background-color: lighten($yellow, 5)
+    }
+  }
+}
+footer{
+  padding: 50px 0;
+  background-color: $blue;
+  .l-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+    color: $dark-primary;
+    .box{
+      color: $blue;
+      background-color: $dark-primary;
+      border-radius: 5px;
+      font-size: 24px;
+      padding: 7px 6px 5px 6px;
+      cursor: pointer;
+    }
+  }
+  .r-con{
+    display: flex;
+    flex-direction: column;
+    p{
+      text-align: right;
+      color: $dark-primary;
+      margin-bottom: 0;
+    }
+    @media (max-width: 768px){
+      p{
+        text-align: left;
+        padding-top: 20px;
+      }
+    }
+  }
+  .sweet{
+    font-weight: bold;
+    @include straight-word;
+    @include serif-font();
+    font-size: 24px;
+    color: $dark-primary;
+    line-height: 0.6;
+    margin-bottom: 30px;
+    p{
+      display: inline-block;
+      height: 70px;
+      width: 1px;
+      padding-top: 5px;
+      background-color: $dark-primary;
     }
   }
 }
