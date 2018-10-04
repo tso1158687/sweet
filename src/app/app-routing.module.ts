@@ -13,11 +13,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { DessertComponent } from './dessert/dessert.component';
 import { LoginComponent } from './login/login.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
   {path: 'dessert', component: DessertComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'cart', component: CartComponent},
   // { path: 'activity/:id', component: ViewComponent },
   // { path: 'page/:id', component: ViewComponent },
   // { path: 'view', component: ViewComponent },
