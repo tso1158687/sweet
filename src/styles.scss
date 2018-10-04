@@ -95,46 +95,46 @@ header {
 }
 
 // login
-.login {
-  background-color: $deepGreen;
+// .login {
+//   background-color: $deepGreen;
 
-  .title {
-    font-size: 36px;
-    font-weight: bold;
-    color: $lightGreen;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .ui-inputgroup {
-    .ui-inputgroup-addon {
-      background-color: $lightGreen;
-      border-radius: 0;
-      border-width: 0;
-      padding: 20px;
-    }
-    input {
-      background-color: $lightGreen;
-      border-radius: 0;
-      border-width: 0;
-      padding: 20px;
-    }
-  }
-}
-.connect{
-  .title{
-    &::before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 1px;
-      background-color: $deepGreen;
-      top: 50%;
-      left: 0;
-      z-index: 1;
-    }
-  }
-}
+//   .title {
+//     font-size: 36px;
+//     font-weight: bold;
+//     color: $lightGreen;
+//     text-align: center;
+//     padding-top: 40px;
+//     padding-bottom: 40px;
+//   }
+//   .ui-inputgroup {
+//     .ui-inputgroup-addon {
+//       background-color: $lightGreen;
+//       border-radius: 0;
+//       border-width: 0;
+//       padding: 20px;
+//     }
+//     input {
+//       background-color: $lightGreen;
+//       border-radius: 0;
+//       border-width: 0;
+//       padding: 20px;
+//     }
+//   }
+// }
+// .connect{
+//   .title{
+//     &::before {
+//       position: absolute;
+//       content: '';
+//       width: 100%;
+//       height: 1px;
+//       background-color: $deepGreen;
+//       top: 50%;
+//       left: 0;
+//       z-index: 1;
+//     }
+//   }
+// }
 // footer
 #follow{
   padding: 30px 0;
