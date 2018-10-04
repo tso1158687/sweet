@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { MainComponent } from './main/main.component';
 import { DessertComponent } from './dessert/dessert.component';
 import { LoginComponent } from './login/login.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     MainComponent,
     DessertComponent,
-    LoginComponent
+    LoginComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
