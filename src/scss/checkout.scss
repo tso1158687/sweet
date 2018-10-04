@@ -147,23 +147,19 @@
   }
 
   .next-btn {
-    button {
-      width: 100%;
-      background-color: $yellow;
-      font-size: 24px;
-      padding: 16px 0;
-      font-weight: bold;
-      color: $dark-primary;
-      border: 0;
-      cursor: pointer;
-      @include transition-all;
-    }
+    width: 100%;
+    background-color: $yellow;
+    font-size: 24px;
+    padding: 16px 0;
+    font-weight: bold;
+    color: $dark-primary;
+    border: 0;
+    cursor: pointer;
+    @include transition-all;
 
     &:hover {
-      button {
-        background-color: $dark-primary;
-        color: $yellow;
-      }
+      background-color: $dark-primary;
+      color: $yellow;
     }
   }
 

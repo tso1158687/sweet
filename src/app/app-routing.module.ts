@@ -15,6 +15,7 @@ import { DessertComponent } from './dessert/dessert.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutDoneComponent } from './checkout-done/checkout-done.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cart', component: CartComponent},
   {path: 'checkout', component: CheckoutComponent},
+  {path: 'done', component: CheckoutDoneComponent},
   // { path: 'activity/:id', component: ViewComponent },
   // { path: 'page/:id', component: ViewComponent },
   // { path: 'view', component: ViewComponent },

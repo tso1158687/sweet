@@ -13,6 +13,9 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CheckoutInfoComponent } from './checkout-info/checkout-info.component';
+import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
+import { CheckoutDoneComponent } from './checkout-done/checkout-done.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { CheckoutInfoComponent } from './checkout-info/checkout-info.component';
     LoginComponent,
     CartComponent,
     CheckoutComponent,
-    CheckoutInfoComponent
+    CheckoutInfoComponent,
+    CheckoutFormComponent,
+    CheckoutDoneComponent,
   ],
   imports: [
     BrowserModule,
