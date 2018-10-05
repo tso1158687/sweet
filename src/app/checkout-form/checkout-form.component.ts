@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CheckoutFormComponent implements OnInit {
   step = 1;
   // 運送、付款、發票
-  title = '運送'
+  title = '運送';
   constructor() { }
 
   ngOnInit() {
@@ -17,15 +17,21 @@ export class CheckoutFormComponent implements OnInit {
     this.step += 1;
     switch (this.step) {
       case 1:
-        this.title = "運送"
+        this.title = '運送';
         break;
       case 2:
-        this.title = "付款"
+        this.title = '付款';
         break;
       case 3:
-        this.title = "發票"
+        this.title = '發票';
         break;
     }
+  }
+  finish() {
+
+  }
+  changeStep(step) {
+    this.step = step;
   }
 
 }

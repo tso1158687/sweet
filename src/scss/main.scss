@@ -1,0 +1,306 @@
+
+	.banner{
+		margin-top: 128px;
+		.container{
+			background-image: url('assets/img/header.jpg');
+			@include bg-cover;
+			height: 500px;
+		}
+	}
+	.banner-con{
+		.row{
+			transform: translateY(-50%);
+			.column-word{
+			    max-height: 300px;
+				height: 20vw;
+				background-color: $dark-primary;
+			    border: 2px #fff solid;
+			    position: relative;
+			    @include sans-serif-font();
+			    overflow: hidden;
+			    @include straight-word;
+			    letter-spacing: 4px;
+			    box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+			    @media only screen and (max-width: 991px) and (min-width: 768px){
+					height: 18vw;
+			    }
+			    @media only screen and (max-width: 767px) and (min-width: 577px){
+					flex: 0 0 33%;
+				    max-width: 33%;
+				    height: 22vw;
+			    }
+			    .con{
+			    	position: absolute;
+		    	    top: 0;
+		    	    left: -2px;
+		    	    height: 100%;
+		    	    width: 101%;
+			    	@include flex-center;
+			    	font-size: 24px;
+			    	background-color: fade-out($primary, .2);
+			    	color: #fff;
+			    	@media (max-width: 576px){
+			    		font-size: 16px;
+			    	}
+			    	@media only screen and (max-width: 767px) and (min-width: 577px){
+			    		font-size: 18px;
+			    	}
+		    	    @media only screen and (max-width: 991px) and (min-width: 768px){
+		    			font-size: 20px;
+		    	    }
+			    }
+			    &::before{
+    		    	@include bg-cover;
+    		    	filter:blur(5px);
+    		    	position: absolute;
+    	    	    top: -2.5%;
+    	    	    left: -2.5%;
+    	    	    height: 105%;
+    	    	    width: 105%;
+    	    	    content: '';
+    	    	    @include transition-all(0.5s)
+			    }
+			    &:nth-child(1){
+					font-weight: bold;
+					.con{
+						background-color: fade-out($yellow, .2);
+						color: $dark-primary;
+					}
+			    	&::before{
+				    	background-image: url('assets/img/index/header-1.jpg');
+			    	}
+			    }
+			    &:nth-child(2){
+			    	border-right-width: 0;
+			    	border-left-width: 0;
+			    	&::before{
+				    	background-image: url('assets/img/index/header-2.jpg');
+			    	}
+			    }
+			    &:nth-child(3)::before{
+			    	background-image: url('assets/img/index/header-3.jpg');
+			    }
+			    &:hover{
+			    	&::before{
+						transform: rotate(20deg) scale(1.5);
+			    	}
+			    }
+			}
+		}
+	}
+	@media (max-width: 992px){
+		.banner{
+			.container{
+				background: none;
+				height: 70vw;
+				max-height: 500px
+			}
+			margin-top: 80px;
+			background-image: url('assets/img/header.jpg');
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+	@media (max-width: 576px){
+		.banner-con{
+			.row{
+				transform: translateY(0);
+				.column-word{
+					height: 180px;
+					border-width: 1px;
+					box-shadow: none;
+					.con{
+						width: 102%;
+					}
+				}
+			}
+		}
+	}
+	.why{
+		background-color: $blue;
+		max-height: 420px;
+		margin-bottom: 150px;
+		@media (max-width: 768px){
+			max-height: none;
+			margin-top: 60px;
+			margin-bottom: 0px;
+			background-color: #fff;
+			&.two{
+				.row{
+					flex-wrap: wrap-reverse;
+				}
+			}
+		}
+		.l-con{
+			height: 420px;
+			.over-con{
+				height: 110%;
+				background-image: url('assets/img/index/why-1.jpg');
+				@include bg-cover;
+				position: relative;
+				bottom: 5%;
+			}
+			@media (max-width: 768px){
+				height: 45vw;
+				padding: 0;
+				.over-con{
+					height: 100%;
+					bottom: 0;
+				}
+			}
+		}
+		&.two{
+			.l-con .over-con{
+				background-image: url('assets/img/index/why-2.jpg');
+			}
+		}
+		.r-con{
+			position: relative;
+			.title{
+				position: absolute;
+				right: 0;
+				top: -5%;
+				font-weight: bold;
+				@include straight-word;
+				font-size: 38px;
+				color: $dark-primary;
+				line-height: 0.6;
+				p{
+					display: inline-block;
+					height: 70px;
+					width: 1px;
+					padding-top: 5px;
+					background-color: $dark-primary;
+
+				}
+				@media only screen and (max-width: 991px) and (min-width: 768px){
+					font-size: 34px;
+				}
+			    @media only screen and (max-width: 767px) and (min-width: 577px){
+					top: -80px !important;
+			    }
+			    @media (max-width: 768px){
+					display: none;
+					position: relative;
+					-webkit-writing-mode: unset;
+					writing-mode: unset;
+					line-height: 1.2;
+					right: 0;
+					top: -30px;
+					text-align: center;
+					font-size: 28px;
+					p{
+						width: 50px;
+					    height: 1px;
+					    padding: 0;
+						margin-left: 5px;
+						margin-bottom: 8px;
+					}
+				}
+			}
+			.content{
+				@include straight-word;
+				@include sans-serif-font();
+				font-size: 18px;
+				width: calc(100% - 11vw);
+				letter-spacing: 1px;
+			    padding: 50px 0;
+			    line-height: 2;
+			    color: $light-primary;
+			    @media only screen and (max-width: 991px) and (min-width: 768px){
+			    	width: calc(100% - 10vw);
+			    	font-size: 19px;
+			    	line-height: 1.8;
+			    }
+			    @media only screen and (max-width: 767px) and (min-width: 577px){
+					// display: flex;
+					// align-items: flex-end;
+			    }
+			    @media (max-width: 768px){
+			    	width: 100%;
+			    	writing-mode: unset;
+			    	padding: 35px 15px;
+			    	letter-spacing: 0px;
+			    	font-size: 16px;
+			    }
+			}
+			@media (max-width: 768px){
+				&:not(.phone-con){
+					background-color: $blue;
+				}
+			}
+		}
+		.phone{
+			display: none;
+			@media (max-width: 768px){
+				display: block !important;
+			}
+		}
+		.container{
+			@media only screen and (max-width: 991px) and (min-width: 768px){
+				max-width: 95%;
+			}
+		}
+
+	}
+	#bhr{
+		@include flex-center;
+		h2{
+			font-weight: bold;
+			@include straight-word;
+			@include serif-font();
+			font-size: 38px;
+			color: $dark-primary;
+			line-height: 1;
+			p{
+				display: inline-block;
+				height: 70px;
+				width: 1px;
+				padding-top: 5px;
+				background-color: $dark-primary;
+
+			}
+			@media (max-width: 768px){
+				width: 100%;
+				font-size: 28px;
+				writing-mode: unset;
+				padding: 35px 15px;
+				letter-spacing: 0px;
+				line-height: 1.5;
+				text-align: center;
+				p{
+					display: inline-block;
+					height: 1px;
+					width: 50px;
+					padding: 0;
+					margin-bottom: 9px;
+					margin-left: 5px;
+
+				}
+			}
+		}
+	}
+	.shop{
+		.carousel-control-next, .carousel-control-prev{
+			height: 250px;
+			margin-top: 50px;
+		}
+	}
+
+
+
+	@media only screen and (max-width: 767px) and (min-width: 577px){
+
+	}
+	@media only screen and (max-width: 991px) and (min-width: 768px){
+
+	}
+	@media only screen and (max-width: 1200px) and (min-width: 992px){
+
+	}
+
+@keyframes jump {
+    0%   {top:20px}
+    50%  {top:10px}
+    100% {top:20px}
+}

@@ -37,6 +37,7 @@
           z-index: 1;
 
           a {
+            cursor: pointer;
             position: absolute;
             top: 0;
             left: 0;
@@ -294,6 +295,9 @@
               &::before {
                 color: $blue;
               }
+            }
+            a{
+              cursor: pointer;
             }
           }
         }

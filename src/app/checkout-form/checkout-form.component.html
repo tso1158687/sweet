@@ -52,7 +52,7 @@
     <div class="title">
       <h2>付款</h2>
       <div class="progressive">
-        <div class="circle done"><a href="checkout.html"> </a></div>
+        <div class="circle done"><a (click)="changeStep(1)"> </a></div>
         <div class="circle active"></div>
         <div class="circle"></div>
       </div>
@@ -104,8 +104,8 @@
     <div class="title">
       <h2>發票</h2>
       <div class="progressive">
-        <div class="circle done"><a href="checkout.html"> </a></div>
-        <div class="circle done"><a href="checkout-2.html"> </a></div>
+        <div class="circle done"><a (click)="changeStep(1)"> </a></div>
+        <div class="circle done"><a (click)="changeStep(2)"> </a></div>
         <div class="circle active"></div>
       </div>
     </div>
@@ -155,4 +155,5 @@
     </div>
   </span>
 </div>
-<button class="next-btn" (click)="nextStep()">下一步</button>
+<button class="next-btn" *ngIf="step<3" (click)="nextStep()">下一步</button>
+<button class="next-btn" *ngIf="step===3" routerLink="/done">確認結帳</button>
